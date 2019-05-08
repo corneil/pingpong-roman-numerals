@@ -95,11 +95,20 @@ public class RomanNumeralConverterTest {
     @Test
     public void testWide() {
         Random rand = new Random();
-        for (int i = 0; i < 500; i++) {
-            int number = rand.nextInt(10000);
+        for (int i = 1; i < 500; i++) {
+            int number = rand.nextInt(10000) + 1;
             String numerals = RomanNumeralConvert.convert(number);
             int arabic = RomanNumeralConvert.parse(numerals);
             assertEquals("Problem converting:" + number + ":" + numerals, number, arabic);
+        }
+    }
+    @Test
+    public void testThousands() {
+        for(int i = 1000; i <= 10000; i += 500) {
+            String numerals = RomanNumeralConvert.convert(i);
+            int arabic = RomanNumeralConvert.parse(numerals);
+            assertEquals("Problem converting:" + i + ":" + numerals, i, arabic);
+            System.out.printf("%d = %s\n" , i, numerals);
         }
     }
 }
