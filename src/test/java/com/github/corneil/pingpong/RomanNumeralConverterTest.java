@@ -21,44 +21,44 @@ public class RomanNumeralConverterTest {
     }
 
     @Test
-    public void testConvert3() throws Exception {
+    public void testConvert3() {
         assertEquals("III", RomanNumeralConvert.convert(3));
     }
 
     @Test
-    public void testConvert4() throws Exception {
+    public void testConvert4() {
         assertEquals("IV", RomanNumeralConvert.convert(4));
     }
 
     @Test
-    public void testConvert5() throws Exception {
+    public void testConvert5() {
         assertEquals("V", RomanNumeralConvert.convert(5));
     }
 
     @Test
-    public void testConvert9() throws Exception {
+    public void testConvert9() {
         assertEquals("IX", RomanNumeralConvert.convert(9));
     }
 
     @Test
-    public void testConvert10() throws Exception {
+    public void testConvert10() {
         assertEquals("X", RomanNumeralConvert.convert(10));
     }
 
     @Test
-    public void testConvert50() throws Exception {
+    public void testConvert50() {
         assertEquals("L", RomanNumeralConvert.convert(50));
     }
 
     @Test
-    public void testConvert40() throws Exception {
+    public void testConvert40() {
         assertEquals("XL", RomanNumeralConvert.convert(40));
         assertEquals("XLI", RomanNumeralConvert.convert(41));
         assertEquals("XXXIX", RomanNumeralConvert.convert(39));
     }
 
     @Test
-    public void testConvert90() throws Exception {
+    public void testConvert90() {
         assertEquals("LXXXIX", RomanNumeralConvert.convert(89));
         assertEquals("XC", RomanNumeralConvert.convert(90));
         assertEquals("XCI", RomanNumeralConvert.convert(91));
