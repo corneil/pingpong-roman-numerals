@@ -1,6 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
-    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.21'
 }
 
 group 'com.github.corneil.icj.pingpong'

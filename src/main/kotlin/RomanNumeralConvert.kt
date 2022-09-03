@@ -27,10 +27,11 @@ object RomanNumeralConvert {
   }
   
   fun parse(input: String): Int {
-    for (numeral in Numerals.values()) {
-      if (input.startsWith(numeral.numeral)) {
-        val len = numeral.numeral.length
-        var result = numeral.arabic
+    return Numerals.values()
+      .find { input.startsWith(it.numeral) }
+      ?.let { 
+        val len = it.numeral.length
+        var result = it.arabic
         if (input.length > len) {
           result += parse(input.substring(len))
         }
@@ -46,8 +47,8 @@ object RomanNumeralConvert {
     while (remainder > 0) {
       for (numeral in Numerals.values()) {
         while (remainder >= numeral.arabic) {
-	  result.append(numeral.numeral)
-	  remainder -= numeral.arabic
+	        result.append(numeral.numeral)
+	        remainder -= numeral.arabic
         }
       }
     }
